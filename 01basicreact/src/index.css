@@ -1,0 +1,30 @@
+
+
+.form-container {
+  display: flex;
+  flex-direction: column; /* vertical stacking */
+  gap: 1rem;
+  align-items: flex-start; /* left align all groups */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row; /* label + input side-by-side */
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

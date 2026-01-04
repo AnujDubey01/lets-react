@@ -36,7 +36,7 @@ function Login() {
 
     <button
       onClick={handleSubmit}
-      className="w-full bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition duration-300"
+      className="w-full bg-indigo-600 text-black py-2 rounded-lg font-medium hover:bg-indigo-700 transition duration-300"
     >
       Submit
     </button>

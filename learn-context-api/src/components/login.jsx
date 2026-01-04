@@ -19,25 +19,38 @@ function Login() {
     </h2>
 
     <input
-      type="text"
-      value={username}
-      onChange={(e) => setUsername(e.target.value)}
-      placeholder="Username"
-      className="w-full mb-4 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-    />
+  type="text"
+  value={username}
+  onChange={(e) => setUsername(e.target.value)}
+  placeholder="Username"
+  className="
+    w-full mb-4 px-4 py-2 
+    border rounded-lg 
+    bg-white text-gray-900 
+    placeholder-gray-400
+    focus:outline-none focus:ring-2 focus:ring-indigo-500
+  "
+/>
 
-    <input
-      type="password"
-      value={password}
-      onChange={(e) => setPassword(e.target.value)}
-      placeholder="Password"
-      className="w-full mb-6 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-    />
+<input
+  type="password"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+  placeholder="Password"
+  className="
+    w-full mb-6 px-4 py-2 
+    border rounded-lg 
+    bg-white text-gray-900 
+    placeholder-gray-400
+    focus:outline-none focus:ring-2 focus:ring-indigo-500
+  "
+/>
+
 
     <button
       onClick={handleSubmit}
-      className="w-full bg-indigo-600 text-black py-2 rounded-lg font-medium hover:bg-indigo-700 transition duration-300"
-    >
+      className="w-full bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition duration-300"
+        >
       Submit
     </button>
   </div>

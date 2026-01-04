@@ -1,5 +1,7 @@
 import React, {useState, useContext} from 'react'
 import UserContext from '../context/UserContext'
+import Profile from './profile';
+
 
 function Login() {
     const [username, setUsername] = useState('')
@@ -8,15 +10,17 @@ function Login() {
     const {setUser} = useContext(UserContext)
 
     const handleSubmit = (e) => {
-        setUser({username, password})
-    }
+      e.preventDefault();
+      if (!username || !password) return;
+      setUser({ username, password });
+    };
+
   return (
    <div className="min-h-screen flex items-center justify-center bg-gray-100">
   <div className="w-full max-w-sm bg-white p-6 rounded-xl shadow-lg">
     <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
       Login
     </h2>
-    <form onSubmit={handleSubmit}>
     <input
   type="text"
   value={username}
@@ -53,7 +57,9 @@ function Login() {
         >
       Submit
     </button>
-    </form>
+
+    <Profile />
+
   </div>
 </div>
     

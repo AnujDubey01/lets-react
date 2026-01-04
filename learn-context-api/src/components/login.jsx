@@ -30,6 +30,7 @@ function Login() {
     focus:outline-none focus:ring-2 focus:ring-indigo-500
   "
 />
+{" "}
 
 <input
   type="password"
@@ -46,7 +47,7 @@ function Login() {
 />
 
 
-    <button
+    <button  onClick={handleSubmit}
       type="submit"
       className="w-full bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition duration-300"
         >

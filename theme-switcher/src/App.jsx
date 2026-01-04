@@ -19,8 +19,14 @@ function App() {
   // actual change in theme
 
   useEffect(() => {
-    document.querySelector('html').classList.remove("light", "dark")
-    document.querySelector('html').classList.add(themeMode)
+    console.log('useEffect triggered, themeMode:', themeMode)
+    const htmlElement = document.querySelector('html')
+    console.log('HTML element before:', htmlElement.className)
+    
+    htmlElement.classList.remove("light", "dark")
+    htmlElement.classList.add(themeMode)
+    
+    console.log('HTML element after:', htmlElement.className)
   }, [themeMode])
   
 

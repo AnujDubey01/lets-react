@@ -8,7 +8,6 @@ function Login() {
     const {setUser} = useContext(UserContext)
 
     const handleSubmit = (e) => {
-        e.preventDefault()
         setUser({username, password})
     }
   return (
@@ -17,7 +16,7 @@ function Login() {
     <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
       Login
     </h2>
-
+    <form onSubmit={handleSubmit}>
     <input
   type="text"
   value={username}
@@ -48,11 +47,12 @@ function Login() {
 
 
     <button
-      onClick={handleSubmit}
+      type="submit"
       className="w-full bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition duration-300"
         >
       Submit
     </button>
+    </form>
   </div>
 </div>
     
